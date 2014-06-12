@@ -1,20 +1,13 @@
-/* All of the Model Work */
-
 var model = {
 	values: [],
-	numBars: 140,
-	// Creates an Array of random values
 	initialize: function(){
-		for(var i = 0;i < this.numBars; i++){
-			this.values.push(Math.floor(Math.random() * this.numBars));
+		for(var i = 0;i < 140; i++){
+			this.values.push(Math.floor(Math.random() * this.values.length));
 		}
-		this.randomize();
 	},
-	// Future Use for the Clock Transition
 	time: function(){
 		return new Date();
 	},
-	// Shuffles the Array
 	randomize: function(){
 		for(var i = 0; i < this.values.length; i++){
 			var j = Math.floor(Math.random() * this.values.length);
@@ -23,7 +16,6 @@ var model = {
 			this.values[i] = jVal;
 		}
 	},
-	// Bubble Sorts the array
 	bubbleSort: function(){
 		var i = 0, id, sorted = false, j = model.values.length - 1;
 		var frame = setInterval(function(){
@@ -45,7 +37,6 @@ var model = {
 			update(model.values, i, j);
 		}, 10);
 	}
-	/* Add other Sorting Algorithms */
 };
 
 model.initialize();
