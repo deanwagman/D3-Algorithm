@@ -1,13 +1,19 @@
+/* Main Model */
+
 var model = {
 	values: [],
+	numBars: 140,
 	initialize: function(){
-		for(var i = 0;i < 140; i++){
-			this.values.push(Math.floor(Math.random() * this.values.length));
+		for(var i = 0;i < numBars; i++){
+			this.values.push(Math.floor(Math.random() * numBars));
 		}
+		this.randomize();
 	},
+	/* For future clock functionality */
 	time: function(){
 		return new Date();
 	},
+	/* Shuffles Array */
 	randomize: function(){
 		for(var i = 0; i < this.values.length; i++){
 			var j = Math.floor(Math.random() * this.values.length);
@@ -37,6 +43,7 @@ var model = {
 			update(model.values, i, j);
 		}, 10);
 	}
+	/* Todo: Add other Sorting algorithms */
 };
 
 model.initialize();
