@@ -2,7 +2,7 @@
 
 var model = {
 	values: [],
-	numBars: 140,
+	numBars: 100,
 	initialize: function(){
 		for(var i = 0;i < this.numBars; i++){
 			this.values.push(Math.floor(Math.random() * this.numBars));
