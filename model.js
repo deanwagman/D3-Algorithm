@@ -4,8 +4,8 @@ var model = {
 	values: [],
 	numBars: 140,
 	initialize: function(){
-		for(var i = 0;i < numBars; i++){
-			this.values.push(Math.floor(Math.random() * numBars));
+		for(var i = 0;i < this.numBars; i++){
+			this.values.push(Math.floor(Math.random() * this.numBars));
 		}
 		this.randomize();
 	},
