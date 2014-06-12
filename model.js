@@ -41,8 +41,22 @@ var model = {
 				}
 			}
 			update(model.values, i, j);
-		}, 10);
-	}
+		}, 1000/60);
+	},
+	/* IN PROGRESS
+	mergeSort: function(){
+		var left =  0, 
+			right = this.values.length / 2;
+		var frame = setInterval(function(){
+			if(right < this.values.length){
+				if(this.values[right] < this.values[left]){
+					var temp = this.values[left];
+					this.values[left] = this.values[right];
+					this.values[right] = temp;
+				}
+			}
+		}, 1000/60);
+	} */
 	/* Todo: Add other Sorting algorithms */
 };
 
