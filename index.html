@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Sorttic</title>
+	<!-- Styles are here temporary while they're simple -->
 	<style>
 		#container{
 			background-color: #0B2E41;
@@ -20,8 +21,12 @@
 	<body>
 		<svg id="container"></svg>
 		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-		<script type="text/javascript" src="app.js"></script>
-		<script type="text/javascript" src="test.js"></script>
+		<script type="text/javascript" src="model.js"></script>
+		<script type="text/javascript" src="view.js"></script>
+		<script>
+			update(model.values);
+			model.bubbleSort();
+		</script>
 	</body>
 </head>
 </html>
